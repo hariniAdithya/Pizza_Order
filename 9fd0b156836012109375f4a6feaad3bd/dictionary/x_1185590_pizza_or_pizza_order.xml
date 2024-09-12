@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="18d9351283a012109375f4a6feaad3db" label="Pizza Order" max_length="40" name="x_1185590_pizza_or_pizza_order" type="collection">
+        <element attributes="encode_utf8=false" label="Customer Name" max_length="32" name="customer_name" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="chiken" label="Non-Veg Pizzas" max_length="40" name="non_veg_pizzas" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Chicken Pizza" value="chiken"/>
+                <element inactive_on_update="false" label="Tandoori Pizza" value="tandoori_pizza"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="veg" label="Veg/Non-Veg" max_length="40" name="veg_non_veg" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Non-Veg" value="non_veg"/>
+                <element inactive_on_update="false" label="Veg" value="veg"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="panner_pizza" label="Veg Pizzas" max_length="40" name="veg_pizzas" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Corn Pizza " value="corn_pizza"/>
+                <element inactive_on_update="false" label="Onion Pizza" value="onion_pizza"/>
+                <element inactive_on_update="false" label="Panner Pizza" value="panner_pizza"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="customer_name"/>
+        </index>
+    </element>
+</database>
